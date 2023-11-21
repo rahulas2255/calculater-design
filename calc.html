@@ -10,37 +10,38 @@
 <body>
     <div class="calculator">
 
-        <input type="text" class="calculator-screen" value="0" disabled />
+        <input type="text" id="result" class="calculator-screen" placeholder="0" readonly />
       
         <div class="calculator-keys">
       
 
-          <button type="button" class="operator" value="(">(</button>
-          <button type="button" class="operator" value=")">)</button>
-          <button type="button" class="operator" value="backspace"><i class="fa-solid fa-delete-left"></i></button>
-          <button type="button" class="operator" value="/">&divide;</button>
+          <button type="button"  onclick="displayData('(')" class="operator" value="(">(</button>
+          <button type="button"  onclick="displayData(')')" class="operator" value=")">)</button>
+          <button type="button"  onclick="calculaterClear()" class="operator" value="backspace">AC</i></button>
+          <button type="button" onclick="displayData('/')" class="operator" value="/">&divide;</button>
       
-          <button type="button" value="7">7</button>
-          <button type="button" value="8">8</button>
-          <button type="button" value="9">9</button>
-          <button type="button" class="operator" value="*">&times;</button>
+          <button type="button" onclick="displayData('7')"  value="7">7</button>
+          <button type="button"  onclick="displayData('8')" value="8">8</button>
+          <button type="button"  onclick="displayData('9')" value="9">9</button>
+          <button type="button"  onclick="displayData('*')" class="operator" value="*">&times;</button>
           
-          <button type="button" value="4">4</button>
-          <button type="button" value="5">5</button>
-          <button type="button" value="6">6</button>
-          <button type="button" class="operator" value="-">-</button>
+          <button type="button"  onclick="displayData('4')" value="4">4</button>
+          <button type="button"  onclick="displayData('5')" value="5">5</button>
+          <button type="button"  onclick="displayData('6')" value="6">6</button>
+          <button type="button"  onclick="displayData('-')" class="operator" value="-">-</button>
           
-          <button type="button" value="1">1</button>
-          <button type="button" value="2">2</button>                    
-          <button type="button" value="3">3</button>
-          <button type="button" class="operator" value="+">+</button>
+          <button type="button"  onclick="displayData('1')" value="1">1</button>
+          <button type="button"  onclick="displayData('2')" value="2">2</button>                    
+          <button type="button"  onclick="displayData('3')" value="3">3</button>
+          <button type="button"  onclick="displayData('+')" class="operator" value="+">+</button>
                 
-          <button type="button" value="0">0</button>
-          <button type="button" class="decimal" value=".">.</button>
-          <button type="button" class="operator" value="exponential">exp</button>
-          <button type="button" class="equal-sign" value="=">=</button>
+          <button type="button"  onclick="displayData('0')" value="0">0</button>
+          <button type="button"  onclick="displayData('.')" class="decimal" value=".">.</button>
+          <button type="button"  onclick="removeLast()" class="operator" value="dellast"><i class="fa-solid fa-delete-left"></i></button>
+          <button type="button" onclick="calculateResult()" class="equal-sign" value="=">=</button>
       
         </div>
     </div>
 </body>
+<script src="./main.js"></script>
 </html>
